@@ -57,14 +57,15 @@
                         <span style="background: url(/Images/@item.Avatar)"></span>
 
                     </a>
-                    <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>30</span> Jan</time>
+                    <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>27</span> Jan</time>
                     <div class="posts-i-info">
                         <p>
-                            <a href="blog.html" class="posts-i-ctg"><h3>@item.PropertyName</h3></a>
-                            <h3 class="posts-i-ttl">
+                            <h1 class=" posts-i-ttl">@*<a href="blog.html" class="posts-i-ctg">*@ @item.PropertyName @*</a>*@ </h1>
+                            <h3 class="posts-i-ttl"> </h3>
                                 <a href="post.html">@item.Content.Substring(0, 100)</a>
-                        <p><a href="/Detail/Detail/@item.ID" class="btn btn-default" role="button">Detail</a></p>
-                        </h3>
+                           
+                        <p><a href="/Detail/Detail/@item.ID" class="btn btn-default" role="button">Detail</a></p>  
+                        
                     </div>
                 </div>
                }                             

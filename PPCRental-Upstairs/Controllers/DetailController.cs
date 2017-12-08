@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PPCRental_Upstairs.Models;
+
 namespace PPCRental_Upstairs.Controllers
 {
     public class DetailController : Controller
