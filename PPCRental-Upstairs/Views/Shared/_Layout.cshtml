@@ -9,17 +9,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
 
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/css/flexslider.css" rel="stylesheet" />
-    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/css/ion.rangeSlider.css" rel="stylesheet" />
-    <link href="~/css/ion.rangeSlider.skinFlat.css" rel="stylesheet" />
-    <link href="~/css/jQuery.Brazzers-Carousel.css" rel="stylesheet" />
-    <link href="~/css/jquery.bxslider.css" rel="stylesheet" />
-    <link href="~/css/jquery.fancybox.css" rel="stylesheet" />
-    <link href="~/css/media.css" rel="stylesheet" />
-    <link href="~/css/style.css" rel="stylesheet" />
-    <link href="~/css/swiper.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/flexslider.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/ion.rangeSlider.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/ion.rangeSlider.skinFlat.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/jQuery.Brazzers-Carousel.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/media.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/style.css" rel="stylesheet" />
+    <link href="~/ScriptsUser/css/swiper.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -598,10 +598,10 @@
                     <!-- Main menu - end -->
                     <!-- Search - start -->
                     <div class="topsearch">
-                        <a id="topsearch-btn" class="topsearch-btn" href="@Url.Action("Search","Search")"><i class="fa fa-search"></i></a>
-                        <form class="topsearch-form" action="@Url.Action("Search","Search")" method="post">
-                            <input type="text" placeholder="Search products">
-                            <button type="submit"><i class="fa fa-search"></i></button>
+                        <a id="topsearch-btn" class="topsearch-btn" role="search" href="@Url.Action("Search","Home")"><i class="fa fa-search"></i></a>
+                        <form class="topsearch-form" action="@Url.Action("Search","Home")" method="post">
+                            <input type="text" placeholder="Search"  name="text">
+                            <button type="submit"> <i class="fa fa-search"></i></button>
                         </form>
                     </div>
                     <!-- Search - end -->
@@ -614,7 +614,7 @@
     </header>
     <!-- Header - end -->
     <!-- Main Content - start -->
-    <main>
+    <main>seach
         @RenderBody()
         
     </main>
@@ -724,19 +724,19 @@
     </footer>
     <!-- Footer - end -->
     <!-- jQuery plugins/scripts - start -->
-    <script src="~/js/jquery-1.11.2.min.js"></script>
+    <script src="~/ScriptsUser/js/jquery-1.11.2.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
-    <script src="~/js/chosen.jquery.min.js"></script>
-    <script src="~/js/gmap.js"></script>
-    <script src="~/js/ion.rangeSlider.min.js"></script>
-    <script src="~/js/jQuery.Brazzers-Carousel.js"></script>
-    <script src="~/js/jquery.bxslider.min.js"></script>
-    <script src="~/js/jquery.flexslider-min.js"></script>
-    <script src="~/js/jquery.waypoints.min.js"></script>
-    <script src="~/js/main.js"></script>
-    <script src="~/js/plugins.js"></script>
-    <script src="~/js/progressbar.min.js"></script>
-    <script src="~/js/swiper.jquery.min.js"></script>
+    <script src="~/ScriptsUser/js/chosen.jquery.min.js"></script>
+    <script src="~/ScriptsUser/js/gmap.js"></script>
+    <script src="~/ScriptsUser/js/ion.rangeSlider.min.js"></script>
+    <script src="~/ScriptsUser/js/jQuery.Brazzers-Carousel.js"></script>
+    <script src="~/ScriptsUser/js/jquery.bxslider.min.js"></script>
+    <script src="~/ScriptsUser/js/jquery.flexslider-min.js"></script>
+    <script src="~/ScriptsUser/js/jquery.waypoints.min.js"></script>
+    <script src="~/ScriptsUser/js/main.js"></script>
+    <script src="~/ScriptsUser/js/plugins.js"></script>
+    <script src="~/ScriptsUser/js/progressbar.min.js"></script>
+    <script src="~/ScriptsUser/js/swiper.jquery.min.js"></script>
     <!-- jQuery plugins/scripts - end -->
 
 </body>
