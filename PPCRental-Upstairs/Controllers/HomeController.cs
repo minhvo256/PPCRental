@@ -20,7 +20,8 @@ namespace PPCRental_Upstairs.Controllers
         [HttpPost]
         public ActionResult Search(string text)
         {
-            var product = model.PROPERTies.ToList().Where(x => x.PropertyName.Contains(text) || x.ID.ToString().Contains(text) || x.Content.Contains(text));
+            var product = model.PROPERTies.ToList().Where(x => x.PropertyName.ToUpper().Contains(text.ToUpper())
+            || x.ID.ToString().ToUpper().Contains(text.ToUpper()) || x.Content.ToUpper().Contains(text.ToUpper()));
             return View(product);
         }
     }
