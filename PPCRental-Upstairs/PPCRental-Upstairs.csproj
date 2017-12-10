@@ -152,6 +152,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminProjectController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,10 +204,42 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Scripts\Css\bootstrap.css" />
+    <Content Include="Areas\Admin\Scripts\Css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Scripts\Css\bootstrap1.css" />
+    <Content Include="Areas\Admin\Scripts\Css\dataTables.bootstrap4.css" />
+    <Content Include="Areas\Admin\Scripts\Css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\Scripts\Css\sb-admin.css" />
+    <Content Include="Areas\Admin\Scripts\Css\Site.css" />
+    <Content Include="Areas\Admin\Scripts\js\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\bootstrap.js" />
+    <Content Include="Areas\Admin\Scripts\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\dataTables.bootstrap4.js" />
+    <None Include="Areas\Admin\Scripts\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery-1.10.2.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery-1.10.2.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery.dataTables.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery.easing.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery.min.js" />
+    <None Include="Areas\Admin\Scripts\js\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery.validate.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery.validate.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\Admin\Scripts\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\modernizr-2.6.2.js" />
+    <Content Include="Areas\Admin\Scripts\js\respond.js" />
+    <Content Include="Areas\Admin\Scripts\js\respond.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\sb-admin-datatables.min.js" />
+    <Content Include="Areas\Admin\Scripts\js\sb-admin.min.js" />
+    <None Include="Areas\Admin\Scripts\js\_references.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap1.css" />
+    <Content Include="Content\dataTables.bootstrap4.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\sb-admin.css" />
     <Content Include="ScriptsUser\css\bootstrap.min.css" />
     <Content Include="ScriptsUser\css\flexslider.css" />
     <Content Include="ScriptsUser\css\font-awesome.min.css" />
@@ -303,6 +337,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -325,13 +360,28 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayoutPage.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProject\Index.cshtml" />
+    <Content Include="Areas\Admin\Scripts\js\jquery-1.10.2.min.map" />
+    <Content Include="Areas\Admin\Views\AdminProject\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProject\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProject\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminProject\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
+    <Content Include="Scripts\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -342,6 +392,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\sb-admin-datatables.min.js" />
+    <Content Include="Scripts\sb-admin.min.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -362,6 +415,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
