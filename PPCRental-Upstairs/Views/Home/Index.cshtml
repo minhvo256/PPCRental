@@ -49,26 +49,26 @@
         <!-- Latest news -->
         <div class="posts-wrap">
             <h3 class="component-ttl"><span> Projects </span></h3>
-            <div class="posts-list">               
-               @foreach (var item in Model)
-               {
-                <div class="posts-i">
-                    <a class="posts-i-img" href="post.html">
-                        <span style="background: url(/Images/@item.Avatar)"></span>
+            <div class="posts-list">
+                @foreach (var item in Model)
+                {
+                    <div class="posts-i">
+                        <a class="posts-i-img" href="post.html">
+                            <span style="background: url(/Images/@item.Avatar)"></span>
 
-                    </a>
-                    <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>27</span> Jan</time>
-                    <div class="posts-i-info">
-                        <p>
-                            <h1 class=" posts-i-ttl">@*<a href="blog.html" class="posts-i-ctg">*@ @item.PropertyName @*</a>*@ </h1>
-                            <h3 class="posts-i-ttl"> </h3>
+                        </a>
+                        <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>27</span> Jan</time>
+                        <div class="posts-i-info">
+                            <p>
+                                <h1 class=" posts-i-ttl">@*<a href="blog.html" class="posts-i-ctg">*@ @item.PropertyName @*</a>*@ </h1>
+                                <h3 class="posts-i-ttl"> </h3>
                                 <a href="post.html">@item.Content.Substring(0, 100)</a>
-                           
-                        <p><a href="/Detail/Detail/@item.ID" class="btn btn-default" role="button">Detail</a></p>  
-                        
+
+                            <p><a href="/Detail/Detail/@item.ID" class="btn btn-default" role="button">Detail</a></p>
+
+                        </div>
                     </div>
-                </div>
-               }                             
+                }
             </div>
         </div>
 
