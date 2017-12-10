@@ -14,7 +14,7 @@ namespace PPCRental_Upstairs.Controllers
         DemoPPCRentalEntities model = new DemoPPCRentalEntities();
         public ActionResult Index()
         {
-            var p = model.PROPERTies.ToList();
+            var p = model.PROPERTies.OrderByDescending(x => x.ID).Take(3).ToList();
             return View(p);
         }
         [HttpPost]
