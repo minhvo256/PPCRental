@@ -204,6 +204,22 @@
     <Content Include="Asset\User\css\swiper.css" />
     <Content Include="Asset\User\fonts\fontawesome-webfont.svg" />
     <Content Include="Asset\User\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Asset\User\Images\baner 3.jpg" />
+    <Content Include="Asset\User\Images\baner1-1.jpg" />
+    <Content Include="Asset\User\Images\banner 1.jpg" />
+    <Content Include="Asset\User\Images\banner 2.jpg" />
+    <Content Include="Asset\User\Images\banner 3-3.jpg" />
+    <Content Include="Asset\User\Images\banner-2-2.jpg" />
+    <Content Include="Asset\User\Images\IMG_1592-stamp.jpg" />
+    <Content Include="Asset\User\Images\PIS3280-Edit-stamp.jpg" />
+    <Content Include="Asset\User\Images\PIS3611.jpg" />
+    <Content Include="Asset\User\Images\PIS_4622-Edit.jpg" />
+    <Content Include="Asset\User\Images\PIS_6656-Edit-stamp.jpg" />
+    <Content Include="Asset\User\Images\PIS_6706-Edit-stamp.jpg" />
+    <Content Include="Asset\User\Images\PIS_7319-Edit-stamp.jpg" />
+    <Content Include="Asset\User\Images\PIS_7389-Edit-stamp.jpg" />
+    <Content Include="Asset\User\Images\PIS_7432-Edit-stamp.jpg" />
+    <Content Include="Asset\User\Images\sunshine-benthanh-cityhome-10-stamp.jpg" />
     <Content Include="Asset\User\img\arr1.png" />
     <Content Include="Asset\User\img\bar.png" />
     <Content Include="Asset\User\img\bx_loader.gif" />
@@ -271,6 +287,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
+    <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -342,7 +359,10 @@
     <Content Include="Asset\User\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Asset\User\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
+    <Content Include="Views\Share\_Layout.cshtml" />
     <Content Include="Views\HomePage\Index.cshtml" />
+    <Content Include="Views\Detail\Detail.cshtml" />
+    <Content Include="Views\HomePage\Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
