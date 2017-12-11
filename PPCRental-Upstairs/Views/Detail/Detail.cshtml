@@ -1,12 +1,12 @@
-﻿@*@using PPCRental_Upstairs.Models
-@model PPCRental_Upstairs.Models.PROPERTY*@
+﻿@using PPCRental_Upstairs.Models
+@model PPCRental_Upstairs.Models.PROPERTY
 
 @{
-//var db = new DemoPPCRentalEntities();
-//ViewBag.Title = "Detail";
-//Layout = "~/Views/Shared/_DetailLayout.cshtml";
-//var pictures = db.PROPERTies.Where(x => x.ID == Model.ID);
-//Layout = 
+    var db = new DemoPPCRentalEntities();
+    ViewBag.Title = "Detail";
+    Layout = "/Views/Shared/_DetailLayout.cshtml";
+    var pictures = db.PROPERTies.Where(x => x.ID == Model.ID);
+    Layout = null;
 }
 
 <main>
