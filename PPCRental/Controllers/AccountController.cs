@@ -1,4 +1,4 @@
-﻿using Models.framwork;
+﻿using Model.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,7 +68,7 @@ namespace PPCRental.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Models.framwork.USER userModel)
+        public ActionResult Login(Model.EF.USER userModel)
         {
             if (ModelState.IsValid)
             {
