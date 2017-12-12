@@ -7,14 +7,12 @@ using System.Text;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
-
 namespace PPCRental.Controllers
 {
     public class AccountController : Controller
     {
         // GET: Account
         // GET: /Account/Register
-
         [HttpGet]
         public ActionResult Register()
         {
