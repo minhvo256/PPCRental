@@ -1,4 +1,4 @@
-namespace Models.framwork
+namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -6,31 +6,23 @@ namespace Models.framwork
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("DISTRICT")]
-    public partial class DISTRICT
+    public partial class PROJECT_STATUS
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DISTRICT()
+        public PROJECT_STATUS()
         {
             PROPERTies = new HashSet<PROPERTY>();
-            STREETs = new HashSet<STREET>();
-            WARDs = new HashSet<WARD>();
         }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(50)]
-        public string DistrictName { get; set; }
+        public string Status_Name { get; set; }
 
         public bool? Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPERTY> PROPERTies { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<STREET> STREETs { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<WARD> WARDs { get; set; }
     }
 }

@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Models;
+using Model;
 using PPCRental.Areas.Admin.CodeS;
+using Model.DB;
+using PPCRental.Common;
 
 namespace PPCRental.Areas.Admin.Controllers
 {
@@ -22,18 +24,29 @@ namespace PPCRental.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(LoginModel model)
         {
-            var result = new UserModel().Login(model.username, model.password);
-
-            if(result && ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                SessionHelper.SetSession(new UserSession() { username = model.username });
-                return RedirectToAction("Index", "HomeAdmin");
+                var acc = new UserDB();
+                var result = acc.Login(model.username, model.password);
+                if (result)
+                {
+                    var user = acc.GetByID(model.username);
+                    var userSession = new UserLogin();
+                    userSession.UserName = user.Email;
+                    userSession.UserID = user.ID;
+                    Session.Add(CommonConstraints.USER_SESSION, userSession);
+                    return RedirectToAction("Index", "/HomeAdmin/Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "wrong");
+                }
             }
             else
             {
-                ModelState.AddModelError("", "wrong email or password");
+                ModelState.AddModelError("", "wrong");
             }
-            return View(model);
+            return View("Index");
         }
     }
 }
