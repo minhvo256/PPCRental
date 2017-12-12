@@ -21,7 +21,7 @@ namespace Model.EF
         public virtual DbSet<STREET> STREETs { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<WARD> WARDs { get; set; }
-
+     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DISTRICT>()
