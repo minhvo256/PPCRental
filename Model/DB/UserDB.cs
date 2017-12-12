@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.EF;
+using PagedList;
 
 namespace Model.DB
 {
@@ -21,10 +22,35 @@ namespace Model.DB
             return entity.ID;
         }
 
+        public bool Update(USER entity)
+        {
+            try
+            {
+                var user = db.USERs.Find(entity.ID);
+                user.FullName = entity.FullName;
+                user.Password = entity.Password;
+                db.SaveChanges();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+          
+        }
+        public IEnumerable<USER> ListAll(int page, int size)
+        {
+            return db.USERs.OrderByDescending(x =>x.ID).ToPagedList(page, size);
+        }
+
         public USER GetByID(string username)
         {
             return db.USERs.SingleOrDefault(x => x.Email == username);
         } 
+        public USER ViewDetail(int id)
+        {
+            return db.USERs.Find(id);
+        }
 
         public bool Login ( string user, string pass)
         {

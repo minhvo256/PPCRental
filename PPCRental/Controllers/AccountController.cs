@@ -1,4 +1,5 @@
 ﻿using Model.EF;
+using Model.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,30 +67,31 @@ namespace PPCRental.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Model.EF.USER userModel)
+        public ActionResult Login(Model.EF.USER model)
         {
-            if (ModelState.IsValid)
-            {
-                using (PPCRentalDB m = new PPCRentalDB())
-                {
-                    var userDetails = m.USERs.Where(x => x.Email.Equals(userModel.Email) && x.Password.Equals(userModel.Password)).FirstOrDefault();
-                    if (userDetails != null)
-                    {
-
-                        Session["EmailID"] = userDetails.ID;
-                        Session["Email"] = userDetails.Email;
-                       // return RedirectToAction("Indexlogin", "Home");
-
-
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "Invalid username or password.");
-                    }
-
-                }
-            }
-            return View(userModel);
+            //if (ModelState.IsValid)
+            //{
+            //    var acc = new UserDB();
+            //    var result = acc.Login(model.username, model.password);
+            //    if (result)
+            //    {
+            //        var user = acc.GetByID(model.username);
+            //        var userSession = new UserLogin();
+            //        userSession.UserName = user.Email;
+            //        userSession.UserID = user.ID;
+            //        Session.Add(CommonConstraints.USER_SESSION, userSession);
+            //        return RedirectToAction("Index", "/HomeAdmin/Index");
+            //    }
+            //    else
+            //    {
+            //        ModelState.AddModelError("", "wrong");
+            //    }
+            //}
+            //else
+            //{
+            //    ModelState.AddModelError("", "wrong");
+            //}
+            return View("Index");
 
         }
     }
