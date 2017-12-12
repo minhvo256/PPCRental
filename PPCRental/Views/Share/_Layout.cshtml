@@ -70,11 +70,11 @@
                     <ul>
                                 
                         <li class="topauth">
-                            <a href="auth.html">
+                            <a href="@Url.Action("Register","Account")">
                                 <i class="fa fa-lock"></i>
                                 <span class="shop-menu-ttl">Registration</span>
                             </a>
-                            <a href="auth.html">
+                            <a href="@Url.Action("Login","Account")">
                                 <span class="shop-menu-ttl">Login</span>
                             </a>
                         </li>
@@ -478,15 +478,15 @@
                             </a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="catalog-list.html">
-                                Catalog <i class="fa fa-angle-down"></i>
+                            <a href="About Us.html">
+                                About Us <i class="fa fa-angle-down"></i>
                             </a>
-                            <ul class="sub-menu">
+                            @*@*<ul class="sub-menu">
                                 <li>
-                                    <a href="catalog-list.html">
+                                    @*<a href="catalog-list.html">
                                         Catalog List - Style 1
-                                    </a>
-                                </li>
+                                    </a>*@
+                                @*</li>
                                 <li>
                                     <a href="catalog-list-2.html">
                                         Catalog List - Style 2
@@ -506,12 +506,12 @@
                                     <a href="catalog-table.html">
                                         Catalog Table
                                     </a>
-                                </li>
-                            </ul>
+                                </li>*@
+                            @*</ul>*@
                         </li>
                         <li class="menu-item-has-children">
                             <a href="product.html">
-                                Product <i class="fa fa-angle-down"></i>
+                                Project <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="sub-menu">
                                 <li>
@@ -528,10 +528,10 @@
                         </li>
                         <li>
                             <a href="elements.html">
-                                Elements
+                                project filter
                             </a>
                         </li>
-                        <li class="menu-item-has-children">
+                        @*<li class="menu-item-has-children">
                             <a href="blog.html">
                                 Blog <i class="fa fa-angle-down"></i>
                             </a>
@@ -552,8 +552,8 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="menu-item-has-children">
+                        </li>*@
+                        @*<li class="menu-item-has-children">
                             <a href="#">
                                 Pages <i class="fa fa-angle-down"></i>
                             </a>
@@ -589,7 +589,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>*@
                         <li class="mainmenu-more">
                             <span>...</span>
                             <ul class="mainmenu-sub"></ul>
@@ -630,7 +630,7 @@
                     </h3>
                     <ul class="nav nav-pills nav-stacked">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="catalog-list.html">Catalog</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
                         <li><a href="elements.html">Elements</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contacts.html">Contacts</a></li>

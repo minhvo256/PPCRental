@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+
 namespace PPCRental.AcceptanceTests.StepDefinitions
 {
     [Binding]
@@ -13,18 +18,16 @@ namespace PPCRental.AcceptanceTests.StepDefinitions
         {
             _driver.Url = "http://localhost:2884/HomePage/Index";
         }
-
         [When(@"I press search button")]
         public void WhenIPressSearchButton()
         {
             _driver.FindElement(By.XPath("//*[@id='topsearch-btn']")).Click();
 
         }
-
-        [When(@"I fill the keyword field with the keyword i want to search")]
-        public void WhenIFillTheKeywordFieldWithTheKeywordIWantToSearch()
+        [When(@"I search for projects by the keyword 'Top'")]
+        public void WhenISearchForProjectsByTheKeywordTop()
         {
-            _driver.FindElement(By.XPath("//*[@id='ha']")).SendKeys("top");
+            _driver.FindElement(By.XPath("//*[@id='ha']")).SendKeys("Top");
         }
 
         [When(@"I press on search button")]
@@ -33,10 +36,11 @@ namespace PPCRental.AcceptanceTests.StepDefinitions
             _driver.FindElement(By.XPath("//*[@id='he']")).Click();
         }
 
-        [Then(@"the result should be project list")]
-        public void ThenTheResultShouldBeProjectList()
+        [Then(@"the list of found projects should contain only: 'PIS Top Apartment'")]
+        public void ThenTheListOfFoundProjectsShouldContainOnlyPISTopApartment()
         {
             _driver.FindElement(By.XPath("/html/body/main/main/section/div[2]/div/div/div/h1")).Text.CompareTo("top");
         }
     }
 }
+

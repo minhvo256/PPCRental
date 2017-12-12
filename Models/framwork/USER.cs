@@ -2,6 +2,7 @@ namespace Models.framwork
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -18,30 +19,44 @@ namespace Models.framwork
 
         public int ID { get; set; }
 
-        [StringLength(50)]
+        [Required(ErrorMessage = "This field is required.")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [StringLength(30)]
+        [Required(ErrorMessage = "This field is required.")]
+        [DataType(DataType.Password)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         public string Password { get; set; }
 
-        [StringLength(50)]
+        //[Required(ErrorMessage = "This field is required.")]
+        //[DataType(DataType.Password)]
+        //[DisplayName("Confirm Password")]
+        //[Compare("Password")]
+        //public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "This field is required.")]
         public string FullName { get; set; }
 
-        [StringLength(15)]
+        [Required(ErrorMessage = "This field is required.")]
+        [Phone]
+        [Display(Name = "Phone Number")]
         public string Phone { get; set; }
 
-        [StringLength(100)]
+        [Required(ErrorMessage = "This field is required.")]
         public string Address { get; set; }
 
-        [StringLength(30)]
         public string Role { get; set; }
 
-        public bool? Status { get; set; }
+        public Nullable<bool> Status { get; set; }
+
+       // public string LoginError { get; set; }
+
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPERTY> PROPERTies { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPERTY> PROPERTies1 { get; set; }
+        
     }
 }
