@@ -44,16 +44,8 @@ namespace PPCRental.AcceptanceTests.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US01_ProjectSearch", @"	As a customer
-	I want to search for projects by a keyword
-	So that I can easily search projects by keyword name of projects 
-
-
-	|  name of projects   | 
-	| PIS Top Apartment   |
-	
-| search keyword | name of projects |
-| Top		     | PIS Top Apartment", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "US01_ProjectSearch", "\tAs a customer\r\n\tI want to search for projects by a keyword\r\n\tSo that I can easil" +
+                    "y search projects by keyword name of projects ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -97,17 +89,17 @@ namespace PPCRental.AcceptanceTests.Features
         public virtual void SimpleSearch()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Simple search", ((string[])(null)));
-#line 14
+#line 7
     this.ScenarioSetup(scenarioInfo);
-#line 15
+#line 8
  testRunner.Given("I access to PPC Rental Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 16
+#line 9
  testRunner.When("I press search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
- testRunner.When("I search for projects by the keyword \'Top\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
- testRunner.When("I press on search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 10
+ testRunner.And("I search for projects by the keyword \'Top\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.And("I press on search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
  testRunner.Then("the list of found projects should contain only: \'PIS Top Apartment\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
